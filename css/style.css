@@ -1,0 +1,174 @@
+/*Global Rules*/
+body{
+    background-color: #F7ECDE;
+    font-family:"PT Sans Caption", sans-serif;
+}
+h1{
+    font-family: "Pacifico", cursive;
+}
+h2{
+    font-family: "Righteous", cursive;
+}
+::selection {
+    background-color: #FEC260; /* Change this to the color you prefer */
+}
+/*pop-up*/
+.overlay{
+    background-color: rgb(0 0 0 / 50%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.open-popup {
+    display: block;
+}
+.pop-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30%;
+    background-color: white;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 20px;
+}
+.pop-up .bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+.pop-up .bar .close a{
+    font-size: 28px;
+    font-weight: 900;
+    color: #212529;
+}
+.color{
+    display: flex;
+}
+.color .red , .color .yellow  , .color .green{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+.color .red{
+    background-color: #F15F5D;
+}
+.color .yellow{
+    background-color: #FEBE2E;
+}
+.color .green{
+    background-color: #4DB748;
+}
+.pop-up p{
+    width: 110%;
+    color: #212529;
+    font-size: 18px;
+}
+.pop-up p i{
+    padding: 0 5px;
+    color: #bb4120;
+}
+/*texts*/
+h1{
+    font-weight: 500;
+    font-size: 50px;
+    position: relative;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 17%;
+    height: 35%;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: .5s;
+}
+h1:hover::before{
+    height: 65%;
+}
+.body{
+    border-width: 2px 0 0 0;
+    border-style: dotted;
+}
+h2{
+    background: linear-gradient(to right, #40A55B, #B2AC4A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    font-size: 25px;
+}
+.form{
+    font-weight: 600;
+}
+.form-control:focus{
+    outline: none;
+    box-shadow: 0 0 10px 2px #e1ae60;
+    border: 1px solid orange;
+}
+input{
+    display: block;
+}
+button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 7px 45px;
+    border-radius: 5px;
+    background-color: #BB4120;
+    color: white;
+    border: 1px solid #BB4120;
+    margin-top: 1%;
+}
+table{
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+tr:first-child{
+    font-weight: 700;
+}
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+tr:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+.visit , .delete{
+    padding: 7px 15px;
+    color: white;
+    font-weight: 900;
+    border: none;
+    margin-right: 80%;
+    width:30%;
+}
+.visit{
+    background-color: rgb(138 158 35 / 90%);
+}
+.delete{
+    background-color: rgb(211 8 32 / 90%);
+}
+.visit a , .delete a{
+    color: white;
+    text-decoration: none;
+}
+.visit i , .delete i{
+    padding-right: 5px;
+}
+.visit:hover{
+    background-color: rgb(138, 158, 35);
+}
+.delete:hover{
+    background-color: rgb(211, 8, 32);
+}

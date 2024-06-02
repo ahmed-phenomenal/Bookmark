@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Bookmark</title>
+    <link rel="icon" href="star.png">
+    <!--Css files-->
+    <link rel='stylesheet' href='./css/bootstrap.min.css'>
+    <link rel='stylesheet' href='./css/style.css'>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <!--pop-up-->
+    <div class="overlay" id="popup">
+        <div class="pop-up">
+            <div class="bar">
+                <div class="color">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <div class="yellow"></div>
+                </div>
+                <div class="close">
+                    <a href="#" onclick="closePopUp()"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <p style="color: #352e28; font-size: 21px;font-family:Bree Serif, serif;width: 100%;">Site Name or Url is not valid, Please follow the rules below :</p>
+            <p><i class="fa-solid fa-circle-arrow-right"></i>Site name must contain at least 3 characters</p>
+            <p><i class="fa-solid fa-circle-arrow-right"></i>Site URL must be a valid one</p>
+        </div>
+    </div>
+
+    <!--text-->
+    <div class="text my-5">
+        <h1 class="my-5 text-center">Bookmarker</h1>
+    </div>
+    <div class="body m-auto" style="width: 85%;">
+        <h2 class="my-3 px-2 text-center">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="form px-3 py-5">
+            <div class="py-2">
+                <label for="Bookmark" class="py-2">
+                    <i class="fa-solid fa-book"></i>
+                    Site Name
+                </label>
+                <input type="text" placeholder="Bookmark Name" id="siteName" class="form-control">
+            </div>
+            <div class="py-2">
+                <label for="Bookmark" class="py-2">
+                    <i class="fa-solid fa-link"></i>
+                    Site URL
+                </label>
+                <input type="text" placeholder="Website URL" id="siteUrl" class="form-control" required>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+    <div class="body m-auto" style="width: 85%;">
+        <table>
+            <tr>
+                <td>Index</td>
+                <td>Website Name</td>
+                <td>Visit</td>
+                <td>Delete</td>
+            </tr>
+            <tbody id="demo">
+            <!--javascript-->
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
